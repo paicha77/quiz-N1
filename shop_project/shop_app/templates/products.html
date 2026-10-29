@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+<h1>Products</h1>
+
+<div class="product-grid">
+
+    {% for product in products %}
+    <div class="product-card">
+
+        <h2>{{ product.name }}</h2>
+
+        <p class="rating">{{ product.price }}</p>
+
+        {% if product.price > 500 %}
+            <p class="expensive">Expensive Product</p>
+        {% else %}
+            <p class="budget">Budget-Friendly Product</p>
+        {% endif %}
+
+
+    </div>
+    {% endfor %}
+</div>
+
+<a href="{% url 'home' %}" class="btn">← Back to Home</a>
+
+{% endblock %}

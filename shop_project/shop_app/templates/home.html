@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <h1>Find Something <span>Amazing.</span></h1>
+
+    <p>
+        Explore our collection and discover
+        something you'll love.
+    </p>
+
+    <a href="{% url 'products' %}" class="btn">
+        Explore Products &rarr;
+    </a>
+</section>
+
+{% endblock %}

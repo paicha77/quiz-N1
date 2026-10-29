@@ -1,0 +1,36 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Shop{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+
+
+<nav class="navbar">
+    <a href="{% url 'home' %}" class="logo">
+        MyShop<span>.</span>
+    </a>
+
+    <a href="{% url 'products' %}" class="nav-link">
+        Products
+    </a>
+</nav>
+
+
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+</body>
+</html>
